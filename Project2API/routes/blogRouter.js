@@ -64,9 +64,9 @@ router.delete('/:id', authMiddleware, async (req, res) => {
     const id = req.params.id
 
     try {
-        const findDelete = await BlogModel.findByIdAndDelete
+       await BlogModel.findByIdAndDelete(id)
 
-        res.status(200).json('Blog was deleted! :( ')
+        res.status(200).json('deleted')
     } catch (error) {
         console.log(error);
     }

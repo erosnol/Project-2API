@@ -40,7 +40,7 @@ router.post('/',[
             email: user.email
         }
 
-        const SECRET_KEY='MY_SECRET_KEY'
+    
 
         const TOKEN = jwt.sign(payload, process.env.SECRET_KEY)
 
