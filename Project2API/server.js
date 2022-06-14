@@ -4,8 +4,8 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 
 const mongoConfig = require('./config/mongoConfig')
-const todosRouter = require('./routes/todosRouter')
-const usersRouter = require('./routes/usersRouters')
+const blogRouter = require('./routes/blogRouter')
+const usersRouter = require('./routes/usersRouter')
 const authRouter = require('./routes/authRouter')
 
 const app = express()
@@ -16,7 +16,7 @@ app.use(morgan('dev'))
 app.use(helmet())
 
 //* Routers
-app.use('/todos', todosRouter)
+app.use('/blog', blogRouter)
 app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 
