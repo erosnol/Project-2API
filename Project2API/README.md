@@ -106,6 +106,67 @@ user Router
 router.post('/') - validates username, email, password with express validator. and use SALT and bcrypt to get a hashedpassword. With this, a payload exists and creates a TOKEN.
 ```
 
+## Schemas
+user
+```bash
+ `username: {
+        type: String,
+        required: true
+    },
+
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+
+    password: {
+        type: String,
+        required: true
+    },
+
+    age: {
+        type: Number
+    },
+
+    birthday: {
+        type: Date,
+        required: true
+    },
+
+    created_at: {
+        type: Date,
+        default: Date.now()
+    }`
+```
+
+blog
+```bash
+ `private: {
+        type: Boolean,
+        required: true
+    },
+
+    blog_title: {
+        type: String,
+        required: true
+    },
+
+    blog_content: {
+        type: String,
+        required: true
+    },
+
+    created_at: {
+        type: Date,
+        default: Date.now()
+    },
+
+    created_by: {
+        type: String,
+        required: true
+    }`
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
