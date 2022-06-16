@@ -19,6 +19,9 @@ Open up Visual Studio Code
 code .
 ```
 
+```bash
+npm init -y 
+```
 Make sure all dependencies are up-to-date and installed.
 
 ```bash
@@ -66,8 +69,11 @@ If you do not have nodemon installed run this on the terminal
 ```bash
 npm i nodemon 
 ```
+## Routes 
+```bash
+    Endpoints, Parameters, Schema
+```
 
-## Endpoints
 
 ```bash 
 app.use('/blog', blogRouter)
@@ -75,9 +81,29 @@ app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 ```
 
-## Parameters
+auth Router
 ```bash
+Auth ('/auth') creates Users and Login 
+ - router.post('/') : Checks users email and password with '.isEmail' & '.notEmpty.' It also creates a TOKEN for user profile.
+```
 
+
+blog Router
+```bash
+router.get('/') - finds all blogs
+
+router.post('/') - creates a blog 
+
+router.get('/') - find blog by id
+
+router.put('/') - updates blog by id
+
+router.delete('/') - deletes blog by id
+```
+
+user Router
+```bash
+router.post('/') - validates username, email, password with express validator. and use SALT and bcrypt to get a hashedpassword. With this, a payload exists and creates a TOKEN.
 ```
 
 
