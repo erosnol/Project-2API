@@ -9,7 +9,8 @@ const usersRouter = require('./routes/usersRouter')
 const authRouter = require('./routes/authRouter')
 
 const app = express()
-const PORT = 4001
+
+const PORT = process.env.PORT || 4001
 
 app.use(express.json())
 app.use(morgan('dev'))

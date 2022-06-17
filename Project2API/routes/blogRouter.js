@@ -49,7 +49,7 @@ router.get('/:id', authMiddleware, async (req,res) => {
 //* ======== UPDATE BY ID ========
 router.put('/:id', authMiddleware, async (req, res) => {
     const id = req.params.id
-    const newBlogData = re.body
+    const newBlogData = req.body
     try {
         // find the blog by id 
         const findBlog = await BlogModel.findByIdAndUpdate(id, newBlogData, {new:true})
