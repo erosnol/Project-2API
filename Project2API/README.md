@@ -1,6 +1,7 @@
 # Blog API 
 
 Blog API that uses CRUD to create, login users, delete and update blog posts. 
+https://blog-api12.herokuapp.com/
 
 ## Installation
 
